@@ -1,0 +1,17 @@
+<div class="row" ng-controller="toggleController">
+    <p>练习使用:ng-disabled</p>
+    click to toggle<input type="checkbox" ng-model="checked"><br>
+    <button class="btn btn-default" ng-model="button" ng-disabled="checked" >button</button>
+    <p>练习使用"ng-check</p>
+    同时选中<input type="checkbox" ng-model="master">
+    <input type="checkbox" ng-checked="master" ng-model="master">
+    <p>使用：ng-readonly</p>
+    选中复选框，能禁止文本框输入<input type="checkbox" ng-model="readonly"><br>
+    <input type="text" value="这里是文本框" class="form-control" ng-readonly="readonly">
+    <p>使用：ng-selected</p>
+    选中复选框改变select选项<input type="checkbox" ng-model="selected"><br>
+    <select class="form-control">
+        <option>hello</option>
+        <option ng-selected="selected">greeting!</option>
+    </select>
+</div>

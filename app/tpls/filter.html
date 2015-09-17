@@ -1,0 +1,77 @@
+<div class="row">
+    <h4>1.表单验证</h4>
+</div>
+
+<div class="row">
+    <form class="form-horizontal" name="signup_form" ng-submit="signupForm()">
+        <fieldset>
+            <legend>sign up</legend>
+            <div class="form-group">
+                <label class="col-lg-2 col-sm-2 text-right">Your Name:</label>
+                <div  class="col-lg-8 col-sm-8">
+                    <input class="form-control" placeholder="Name" name="name" ng-model="signup.name" ng-minlength="3" ng-maxlength="20" required/>
+                    <div class="has-error" ng-show="signup_form.name.$dirty && signup_form.name.$invalid">
+                        <small class="has-error" ng-show="signup_form.name.$error.required">
+                            Your name is required.
+                        </small>
+                        <small class="has-error" ng-show="signup_form.name.$error.minlength">
+                            Your name is required to be at least 3 characters.
+                        </small>
+                        <small class="has-error" ng-show="signup_form.name.$error.maxlength">
+                            Your name cannot be longer than 20 characters.
+                        </small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <label class="col-xs-4 text-right">Your email:</label>
+                    <div class="col-xs-8">
+                        <input type="email" class="form-control" placeholder="Email" name="email" ng-model="signup.email" ng-minlength="3" ng-maxlength="20" required>
+                        <div class="has-error" ng-show="signup_form.email.$dirty && signup_form.email.$invalid">
+                            <small class="has-error" ng-show="signup_form.email.$error.required">
+                                Your email is required.
+                            </small>
+                            <small class="has-error" ng-show="signup_form.email.$error.minlength">
+                                Your email is required to be at least 3 characters.
+                            </small>
+                            <small class="has-error" ng-show="signup_form.email.$error.maxlength">
+                                Your email cannot be longer than 20 characters.
+                            </small>
+                            <small class="has-error" ng-show="signup_form.email.$error.email">
+                                That is not a valid email. Please input a valid email.
+                            </small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <label class="col-xs-4 text-right">
+                        Username:
+                    </label>
+                    <div class="col-xs-8">
+                        <input class="form-control" type="text" placeholder="Desired username" name="username" ng-model="sign.username" ng-minlength="3" ng-maxlength="10" required>
+                        <div class="has-error" ng-show="signup_form.username.$dirty && signup_form.username.$invalid">
+                            <small class="has-error" ng-show="signup_form.username.$error.required">
+                                Please input a username.
+                            </small>
+                            <small class="has-error" ng-show="signup_form.username.$error.minlength">
+                                Your username is required to be at least 3 characters.
+                            </small>
+                            <small class="has-error" ng-show="signup_form.username.$error.maxlength">
+                                Your username cannot be longer than 20 characters.
+                            </small>
+                            <small class="has-error" ng-show="signup_form.username.$error.unique">
+                                That username is taken, please try another.
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-danger pull-right" ng-disabled="signup_form.$invalid">Submit</button>
+            </div>
+        </fieldset>
+    </form>
+</div>

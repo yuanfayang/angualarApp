@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="demoApp">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My AngularJS App</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-2 bg-info">
+            <ul class="list-unstyled">
+                <li>
+                    <a href="#/">登陆页面demo</a>
+                </li>
+                <li>
+                    <a href="#/scrollPage">滚动页面</a>
+                </li>
+                <li>
+                    <a href="#/toggleModel">toggle ng-model</a>
+                </li>
+                <li>
+                    <a href="#/expre">表达式示例</a>
+                </li>
+                <li>
+                    <a href="#/filter">过滤器</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-10">
+            <div class="container">
+                <div ng-view>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="scripts/app.js"></script>
+<script src="scripts/controller.js"></script>
+<script src="scripts/route.js"></script>
+<!--  <script src="view1/view1.js"></script>
+  <script src="view2/view2.js"></script>
+  <script src="components/version/version.js"></script>
+  <script src="components/version/version-directive.js"></script>
+  <script src="components/version/interpolate-filter.js"></script>-->
+</body>
+</html>
